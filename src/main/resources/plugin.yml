@@ -1,0 +1,4 @@
+name: endpatch
+main: net.comecraft.endpatch.EndPatch
+author: garypwn
+version: 1.0
