@@ -34,7 +34,8 @@ repositories {
 dependencies {
 
 	compileOnly group: "org.spigotmc", name: "spigot-api", version: "1.12.2-R0.1-SNAPSHOT";
-	compileOnly group: "com.onarandombox.multiversecore", name: "Multiverse-Core", version: "2.6.0-SNAPSHOT"; 
+	//compileOnly group: "com.onarandombox.multiversecore", name: "Multiverse-Core", version: "2.6.0-SNAPSHOT"; 
+	compileOnly files("lib/Multiverse-Core.jar")
 }
 
 jar {
