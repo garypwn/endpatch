@@ -1,5 +1,11 @@
 package net.comecraft.endpatch;
 
-public class EndPatch {
+import org.bukkit.plugin.java.JavaPlugin;
 
+public class EndPatch extends JavaPlugin {
+
+	@Override
+	public void onEnable() {
+		
+	}
 }
