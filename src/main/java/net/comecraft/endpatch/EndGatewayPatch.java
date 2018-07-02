@@ -33,6 +33,7 @@ public class EndGatewayPatch extends EndPatch implements Listener {
 	 */
 	@EventHandler
 	public void onPlayerTpEvent(PlayerTeleportEvent event) {
+		if (!this.enabled()) return;
 		if (event.getCause().equals(TeleportCause.END_GATEWAY)) {
 
 			Player player = event.getPlayer();

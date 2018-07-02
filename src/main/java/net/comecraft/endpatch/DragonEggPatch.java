@@ -28,6 +28,7 @@ public class DragonEggPatch extends EndPatch implements Listener {
 	 */
 	@EventHandler
 	public void onDragonEggTp(BlockFromToEvent event) {
+		if (!this.enabled()) return;
 		if (event.getBlock().getType().equals(Material.DRAGON_EGG)) {
 			event.setCancelled(true);
 		}
@@ -41,6 +42,7 @@ public class DragonEggPatch extends EndPatch implements Listener {
 	 */
 	@EventHandler
 	public void onDragonEggPhysics(BlockPhysicsEvent event) {
+		if (!this.enabled()) return;
 		if (event.getBlock().getType().equals(Material.DRAGON_EGG)) {
 			event.setCancelled(true);
 		}
