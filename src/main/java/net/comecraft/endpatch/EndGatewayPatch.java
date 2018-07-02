@@ -40,7 +40,7 @@ public class EndGatewayPatch extends EndPatch implements Listener {
 
 			// Do nothing if the player is on the centre island
 			int safeDistance = getConfig().getInt(this.getClass().getName() + ".safe-radius");
-			if (player.getLocation().distance(player.getWorld().getSpawnLocation()) < 800) return;
+			if (player.getLocation().distance(player.getWorld().getSpawnLocation()) < safeDistance) return;
 
 			event.setCancelled(true);
 
