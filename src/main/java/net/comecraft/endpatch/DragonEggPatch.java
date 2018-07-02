@@ -1,11 +1,11 @@
 package net.comecraft.endpatch;
 
 import org.bukkit.Material;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockFromToEvent;
 import org.bukkit.event.block.BlockPhysicsEvent;
+import org.bukkit.plugin.Plugin;
 
 /**
  * DragonEggPatch attempts to address broken behaviour with dragon eggs. It
@@ -16,8 +16,8 @@ public class DragonEggPatch extends EndPatch implements Listener {
 	/**
 	 * {@inheritDoc}
 	 */
-	public DragonEggPatch(FileConfiguration config) {
-		super(config);
+	public DragonEggPatch(Plugin plugin) {
+		super(plugin);
 	}
 
 	/**

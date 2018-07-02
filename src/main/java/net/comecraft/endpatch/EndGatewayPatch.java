@@ -1,12 +1,12 @@
 package net.comecraft.endpatch;
 
 import org.bukkit.Bukkit;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerTeleportEvent;
 import org.bukkit.event.player.PlayerTeleportEvent.TeleportCause;
+import org.bukkit.plugin.Plugin;
 
 import com.onarandombox.MultiverseCore.api.Core;
 import com.onarandombox.MultiverseCore.api.MVDestination;
@@ -20,8 +20,8 @@ public class EndGatewayPatch extends EndPatch implements Listener {
 	/**
 	 * {@inheritDoc}
 	 */
-	public EndGatewayPatch(FileConfiguration config) {
-		super(config);
+	public EndGatewayPatch(Plugin plugin) {
+		super(plugin);
 	}
 
 	/**

@@ -1,25 +1,18 @@
 package net.comecraft.endpatch;
 
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.plugin.Plugin;
 
 public abstract class EndPatch {
 	
-	private FileConfiguration config;
+	private Plugin plugin;
 
 	/**
 	 * Gets the config for this EndPatch
 	 * @return this EndPatch's config
 	 */
 	public FileConfiguration getConfig() {
-		return config;
-	}
-
-	/**
-	 * Sets the config for this EndPatch
-	 * @param config the new config
-	 */
-	public void setConfig(FileConfiguration config) {
-		this.config = config;
+		return plugin.getConfig();
 	}
 	
 	/**
@@ -27,14 +20,14 @@ public abstract class EndPatch {
 	 * @return true if this patch should be enabled.
 	 */
 	public boolean enabled() {
-		return config.getBoolean(getClass().getSimpleName() + ".enabled");
+		return getConfig().getBoolean(getClass().getSimpleName() + ".enabled");
 	}
 
 	/**
 	 * Instantiate a new EndPatch
 	 */
-	public EndPatch(FileConfiguration config) {
-		this.config = config;
+	public EndPatch(Plugin plugin) {
+		this.plugin = plugin;
 	}
 
 }
