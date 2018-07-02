@@ -12,14 +12,20 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class EndPatch extends JavaPlugin {
 
+	private DragonEggPatch eggPatch;
+	private EndGatewayPatch gatewayPatch;
+	
 	@Override
 	public void onEnable() {
 
 		setDefaults();
 
 		// Register event handlers
-		getServer().getPluginManager().registerEvents(new DragonEggPatch(), this);
-		getServer().getPluginManager().registerEvents(new EndGatewayPatch(), this);
+		eggPatch = new DragonEggPatch();
+		getServer().getPluginManager().registerEvents(eggPatch, this);
+		
+		gatewayPatch = new EndGatewayPatch();
+		getServer().getPluginManager().registerEvents(gatewayPatch, this);
 	}
 
 	// Gets default config values from a file and adds them to the fileconfig
