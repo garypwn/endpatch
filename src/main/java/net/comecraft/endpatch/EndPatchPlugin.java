@@ -10,7 +10,7 @@ import org.bukkit.configuration.Configuration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class EndPatch extends JavaPlugin {
+public class EndPatchPlugin extends JavaPlugin {
 
 	private DragonEggPatch eggPatch;
 	private EndGatewayPatch gatewayPatch;

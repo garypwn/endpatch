@@ -1,5 +1,5 @@
 name: endpatch
-main: net.comecraft.endpatch.EndPatch
+main: net.comecraft.endpatch.EndPatchPlugin
 author: garypwn
 version: ${version}
 depend: [Multiverse-Core]
