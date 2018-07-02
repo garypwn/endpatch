@@ -26,7 +26,7 @@ public abstract class EndPatch {
 	 * Checks whether this patch should be enabled.
 	 * @return true if this patch should be enabled.
 	 */
-	public boolean shouldEnable() {
+	public boolean enabled() {
 		return config.getBoolean(this.getClass().getName() + ".enabled");
 	}
 
