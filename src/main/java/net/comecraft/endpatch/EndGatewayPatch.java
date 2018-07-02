@@ -39,7 +39,7 @@ public class EndGatewayPatch extends EndPatch implements Listener {
 			Player player = event.getPlayer();
 
 			// Do nothing if the player is on the centre island
-			int safeDistance = getConfig().getInt(this.getClass().getName() + ".safe-radius");
+			int safeDistance = getConfig().getInt(this.getClass().getSimpleName() + ".safe-radius");
 			if (player.getLocation().distance(player.getWorld().getSpawnLocation()) < safeDistance) return;
 
 			event.setCancelled(true);
@@ -48,7 +48,7 @@ public class EndGatewayPatch extends EndPatch implements Listener {
 			Core multiverse = (Core) Bukkit.getPluginManager().getPlugin("Multiverse-Core");
 			
 			// Get the target destination from the config
-			String dest = getConfig().getString(this.getClass().getName() + ".destination");
+			String dest = getConfig().getString(this.getClass().getSimpleName() + ".destination");
 			
 			// If the config is set to "spawn" use the current world's spawn
 			if (dest.equals("spawn")) {
