@@ -2,3 +2,5 @@ DragonEggPatch:
   enabled: true
 EndGatewayPatch:
   enabled: true
+  destination: spawn
+  safe-radius: 800
