@@ -21,10 +21,10 @@ public class EndPatchPlugin extends JavaPlugin {
 		setDefaults();
 
 		// Register event handlers
-		eggPatch = new DragonEggPatch();
+		eggPatch = new DragonEggPatch(getConfig());
 		getServer().getPluginManager().registerEvents(eggPatch, this);
 		
-		gatewayPatch = new EndGatewayPatch();
+		gatewayPatch = new EndGatewayPatch(getConfig());
 		getServer().getPluginManager().registerEvents(gatewayPatch, this);
 	}
 

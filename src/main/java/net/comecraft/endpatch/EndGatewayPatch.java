@@ -1,6 +1,7 @@
 package net.comecraft.endpatch;
 
 import org.bukkit.Bukkit;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -14,7 +15,14 @@ import com.onarandombox.MultiverseCore.api.MVDestination;
  * EndGatewayPatch provides a workaround for a bug in minecraft where return
  * gateways from the outer islands send players to unsafe locations.
  */
-public class EndGatewayPatch implements Listener {
+public class EndGatewayPatch extends EndPatch implements Listener {
+
+	/**
+	 * {@inheritDoc}
+	 */
+	public EndGatewayPatch(FileConfiguration config) {
+		super(config);
+	}
 
 	/**
 	 * Intercepts teleport events from outer island return gateways.

@@ -1,6 +1,7 @@
 package net.comecraft.endpatch;
 
 import org.bukkit.Material;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockFromToEvent;
@@ -10,7 +11,14 @@ import org.bukkit.event.block.BlockPhysicsEvent;
  * DragonEggPatch attempts to address broken behaviour with dragon eggs. It
  * stops dragon egg teleportation and disables dragon egg physics.
  */
-public class DragonEggPatch implements Listener {
+public class DragonEggPatch extends EndPatch implements Listener {
+
+	/**
+	 * {@inheritDoc}
+	 */
+	public DragonEggPatch(FileConfiguration config) {
+		super(config);
+	}
 
 	/**
 	 * Stop dragon egg teleportation.
