@@ -21,6 +21,14 @@ public abstract class EndPatch {
 	public void setConfig(FileConfiguration config) {
 		this.config = config;
 	}
+	
+	/**
+	 * Checks whether this patch should be enabled.
+	 * @return true if this patch should be enabled.
+	 */
+	public boolean shouldEnable() {
+		return config.getBoolean(this.getClass().getName() + ".enabled");
+	}
 
 	/**
 	 * Instantiate a new EndPatch
